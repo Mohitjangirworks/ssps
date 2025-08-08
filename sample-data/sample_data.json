@@ -1,0 +1,329 @@
+{
+  "news": [
+    {
+      "title": "Class XII Results Declared - Record Breaking Performance!",
+      "content": "We are extremely proud to announce that our Class XII students have achieved an outstanding 98% pass rate with 15 students securing above 95% marks. This is our best performance in the last decade!",
+      "emoji": "🎉",
+      "priority": "high"
+    },
+    {
+      "title": "State Level Science Exhibition Winners",
+      "content": "Our talented students have won the State Level Science Exhibition with their innovative renewable energy project. The team of 5 students from Class XI will now represent Rajasthan at the National level.",
+      "emoji": "🏆",
+      "priority": "normal"
+    },
+    {
+      "title": "Admissions Open for Academic Year 2024-25",
+      "content": "Admissions are now open for all classes from I to XI. Apply online through our website or download the printed form. Last date for admission: March 31, 2024.",
+      "emoji": "📚",
+      "priority": "high"
+    },
+    {
+      "title": "School Achieves Top 10 Ranking in District",
+      "content": "Shri Shyam Public School has been ranked among the top 10 schools in Banswara district based on academic performance, infrastructure, and overall development.",
+      "emoji": "🌟",
+      "priority": "normal"
+    },
+    {
+      "title": "New Computer Lab Inauguration",
+      "content": "Our state-of-the-art computer lab with 40 new computers and high-speed internet connectivity was inaugurated by the District Collector. The lab will enhance digital learning for all students.",
+      "emoji": "💻",
+      "priority": "normal"
+    }
+  ],
+  "events": [
+    {
+      "title": "Annual Sports Day 2024",
+      "description": "Join us for our Annual Sports Day featuring inter-house competitions, athletics, cultural performances, and prize distribution. All parents and community members are cordially invited.",
+      "event_date": "2024-12-15",
+      "event_time": "09:00",
+      "location": "School Playground",
+      "category": "sports"
+    },
+    {
+      "title": "Science Exhibition & Project Fair",
+      "description": "Students from Classes VI to XII will showcase their innovative science projects, experiments, and research work. Judging will be done by external experts.",
+      "event_date": "2024-12-20",
+      "event_time": "10:00",
+      "location": "Science Labs & Main Hall",
+      "category": "academic"
+    },
+    {
+      "title": "Christmas Celebration",
+      "description": "Celebrate the spirit of Christmas with carol singing, dance performances, drama presentations, and festive activities for all students.",
+      "event_date": "2024-12-25",
+      "event_time": "11:00",
+      "location": "School Auditorium",
+      "category": "cultural"
+    },
+    {
+      "title": "Parent-Teacher Meeting",
+      "description": "Important meeting to discuss student progress, academic performance, and future planning. All parents are requested to attend.",
+      "event_date": "2024-12-30",
+      "event_time": "14:00",
+      "location": "Respective Classrooms",
+      "category": "academic"
+    },
+    {
+      "title": "New Year Celebration & Cultural Program",
+      "description": "Welcome the New Year 2025 with cultural performances, student presentations, and special guest performances.",
+      "event_date": "2025-01-01",
+      "event_time": "10:00",
+      "location": "School Auditorium",
+      "category": "cultural"
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Mrs. Sunita Sharma",
+      "position": "Principal",
+      "qualifications": "M.Ed, B.Ed, M.A. (English)",
+      "experience": "25+ Years Experience",
+      "subjects": ["Administration", "English"],
+      "description": "Educational leadership and administration specialist with extensive experience in curriculum development and school management.",
+      "position_order": 1
+    },
+    {
+      "name": "Mr. Rajesh Kumar",
+      "position": "Vice Principal",
+      "qualifications": "M.Sc. (Mathematics), B.Ed",
+      "experience": "20+ Years Experience",
+      "subjects": ["Mathematics"],
+      "description": "Mathematics department head with expertise in advanced mathematics and analytical thinking. Specializes in preparing students for competitive examinations.",
+      "position_order": 2
+    },
+    {
+      "name": "Dr. Priya Singh",
+      "position": "Science Department Head",
+      "qualifications": "Ph.D. (Chemistry), M.Sc., B.Ed",
+      "experience": "15+ Years Experience",
+      "subjects": ["Chemistry", "Physics"],
+      "description": "Research-oriented chemistry teacher focusing on practical applications and scientific methodology. Published researcher in chemistry education.",
+      "position_order": 3
+    },
+    {
+      "name": "Mrs. Meera Gupta",
+      "position": "English Teacher",
+      "qualifications": "M.A. (English), B.Ed",
+      "experience": "18+ Years Experience",
+      "subjects": ["English", "Literature"],
+      "description": "Language specialist with focus on communication skills and literature appreciation. Conducts creative writing workshops for students.",
+      "position_order": 4
+    },
+    {
+      "name": "Mr. Amit Verma",
+      "position": "Computer Science Teacher",
+      "qualifications": "MCA, B.Tech (Information Technology)",
+      "experience": "12+ Years Experience",
+      "subjects": ["Computer Science", "Programming"],
+      "description": "Technology educator specializing in programming, web development, and digital literacy. Trains students in latest programming languages.",
+      "position_order": 5
+    },
+    {
+      "name": "Mrs. Sushila Yadav",
+      "position": "Hindi Teacher",
+      "qualifications": "M.A. (Hindi), B.Ed",
+      "experience": "16+ Years Experience",
+      "subjects": ["Hindi", "Sanskrit"],
+      "description": "Hindi language and literature expert with focus on cultural values and communication skills. Conducts poetry and story writing competitions.",
+      "position_order": 6
+    },
+    {
+      "name": "Mr. Ramesh Patel",
+      "position": "Social Science Teacher",
+      "qualifications": "M.A. (History), M.A. (Political Science), B.Ed",
+      "experience": "14+ Years Experience",
+      "subjects": ["History", "Political Science", "Geography"],
+      "description": "Social science educator with expertise in history and political science. Organizes educational trips and historical awareness programs.",
+      "position_order": 7
+    },
+    {
+      "name": "Mrs. Kavita Jain",
+      "position": "Primary Section In-charge",
+      "qualifications": "M.A. (Child Psychology), B.Ed",
+      "experience": "20+ Years Experience",
+      "subjects": ["Primary Education", "Child Psychology"],
+      "description": "Primary education specialist with deep understanding of child psychology and development. Expert in activity-based learning methods.",
+      "position_order": 8
+    }
+  ],
+  "results": {
+    "class_12": [
+      {
+        "year": 2024,
+        "pass_rate": "98%",
+        "above_90": 45,
+        "above_95": 15,
+        "district_rank": "2nd",
+        "state_rank": "15th",
+        "total_students": 120
+      },
+      {
+        "year": 2023,
+        "pass_rate": "96%",
+        "above_90": 38,
+        "above_95": 12,
+        "district_rank": "3rd",
+        "state_rank": "18th",
+        "total_students": 115
+      },
+      {
+        "year": 2022,
+        "pass_rate": "94%",
+        "above_90": 35,
+        "above_95": 10,
+        "district_rank": "4th",
+        "state_rank": "22nd",
+        "total_students": 110
+      },
+      {
+        "year": 2021,
+        "pass_rate": "92%",
+        "above_90": 32,
+        "above_95": 8,
+        "district_rank": "5th",
+        "state_rank": "25th",
+        "total_students": 108
+      }
+    ],
+    "class_10": [
+      {
+        "year": 2024,
+        "pass_rate": "100%",
+        "above_90": 52,
+        "above_95": 18,
+        "district_rank": "1st",
+        "state_rank": "8th",
+        "total_students": 130
+      },
+      {
+        "year": 2023,
+        "pass_rate": "98%",
+        "above_90": 48,
+        "above_95": 15,
+        "district_rank": "2nd",
+        "state_rank": "12th",
+        "total_students": 125
+      },
+      {
+        "year": 2022,
+        "pass_rate": "96%",
+        "above_90": 42,
+        "above_95": 13,
+        "district_rank": "3rd",
+        "state_rank": "16th",
+        "total_students": 118
+      },
+      {
+        "year": 2021,
+        "pass_rate": "94%",
+        "above_90": 38,
+        "above_95": 11,
+        "district_rank": "4th",
+        "state_rank": "20th",
+        "total_students": 115
+      }
+    ]
+  },
+  "toppers": [
+    {
+      "name": "Priya Sharma",
+      "class_level": "12",
+      "year": 2024,
+      "percentage": 98.2,
+      "stream": "Science",
+      "achievement": "District Topper"
+    },
+    {
+      "name": "Rahul Kumar",
+      "class_level": "12",
+      "year": 2024,
+      "percentage": 97.8,
+      "stream": "Commerce",
+      "achievement": "Stream Topper"
+    },
+    {
+      "name": "Anita Singh",
+      "class_level": "12",
+      "year": 2024,
+      "percentage": 96.5,
+      "stream": "Arts",
+      "achievement": "Stream Topper"
+    },
+    {
+      "name": "Vikash Meena",
+      "class_level": "10",
+      "year": 2024,
+      "percentage": 98.6,
+      "stream": "All Subjects",
+      "achievement": "District Topper"
+    },
+    {
+      "name": "Shreya Patel",
+      "class_level": "10",
+      "year": 2024,
+      "percentage": 97.4,
+      "stream": "All Subjects",
+      "achievement": "School Topper"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "State Science Exhibition - 1st Prize",
+      "description": "Innovation in Renewable Energy project wins state-level competition",
+      "year": 2024,
+      "category": "academic"
+    },
+    {
+      "title": "Mathematics Olympiad Success",
+      "description": "5 students qualified for National Level Mathematics Olympiad",
+      "year": 2024,
+      "category": "academic"
+    },
+    {
+      "title": "District Sports Championship",
+      "description": "Overall champions in inter-school sports competition",
+      "year": 2023,
+      "category": "sports"
+    },
+    {
+      "title": "Best School Award - Regional",
+      "description": "Recognized as best school in regional cultural competition",
+      "year": 2023,
+      "category": "cultural"
+    },
+    {
+      "title": "Academic Excellence Recognition",
+      "description": "Ranked among Top 10 Schools in District for consistent performance",
+      "year": 2024,
+      "category": "academic"
+    },
+    {
+      "title": "Green School Award",
+      "description": "Environmental Conservation Initiative recognized at state level",
+      "year": 2023,
+      "category": "environmental"
+    }
+  ],
+  "school_info": {
+    "name": "Shri Shyam Public School",
+    "location": "Kushalpura",
+    "address": "Near Bus Stand, Kushalpura, Banswara, Rajasthan - 327001",
+    "established": 1998,
+    "affiliation": "CBSE",
+    "principal": "Mrs. Sunita Sharma",
+    "contact": {
+      "phone": "+91 98765 43210",
+      "email": "info@shrishyamschool.edu",
+      "principal_phone": "+91 98765 43211",
+      "admissions_phone": "+91 98765 43212"
+    },
+    "statistics": {
+      "total_students": 2000,
+      "faculty_count": 40,
+      "experience_years": 26,
+      "pass_rate": 98,
+      "student_teacher_ratio": "15:1"
+    }
+  }
+}

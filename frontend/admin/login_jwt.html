@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Shri Shyam Public School</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+        .admin-login {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-mixed);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .admin-login::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle fill="%23ffffff" fill-opacity="0.1" cx="10" cy="10" r="2"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+            animation: bgMove 20s linear infinite;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        .login-container {
+            background: var(--background-white);
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: var(--shadow-xl);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .login-header {
+            margin-bottom: 40px;
+        }
+
+        .login-header .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            border: 4px solid var(--secondary-yellow);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .login-header h1 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .login-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .login-form {
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px 50px 15px 15px;
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: var(--background-light);
+            font-weight: 500;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            background: var(--background-white);
+            box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
+        }
+
+        .form-group .input-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .form-group .input-icon:hover {
+            color: var(--primary-blue);
+        }
+
+        .password-toggle {
+            cursor: pointer;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+            accent-color: var(--primary-blue);
+        }
+
+        .forgot-password {
+            color: var(--secondary-yellow-dark);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password:hover {
+            color: var(--secondary-yellow);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--gradient-blue);
+            color: var(--background-white);
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .login-btn:hover::before {
+            left: 100%;
+        }
+
+        .login-btn:hover {
+            background: var(--gradient-mixed);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .login-btn:disabled {
+            background: var(--text-light);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .back-to-site {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        .back-to-site:hover {
+            color: var(--primary-blue);
+            background: var(--background-light);
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--error-color);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--error-color);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .success-message {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success-color);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--success-color);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid var(--background-white);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px 20px;
+                margin: 0 10px;
+                border-radius: 20px;
+            }
+
+            .login-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-group input {
+                padding: 12px 45px 12px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-login">
+        <div class="login-container">
+            <div class="login-header">
+                <img src="../images/logo.png" alt="School Logo" class="logo">
+                <h1>Admin Login</h1>
+                <p>Shri Shyam Public School, Kushalpura</p>
+            </div>
+
+            <div id="message-container"></div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                    <i class="fas fa-eye password-toggle input-icon" id="passwordToggle"></i>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password" id="forgotPassword">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn" id="loginBtn">
+                    <span class="loading-spinner" id="loadingSpinner"></span>
+                    <span id="btnText">Sign In</span>
+                </button>
+            </form>
+
+            <a href="../index.html" class="back-to-site">
+                <i class="fas fa-arrow-left"></i>
+                Back to Website
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_BASE_URL = 'http://localhost:5000/api';
+
+        // DOM elements
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const passwordToggle = document.getElementById('passwordToggle');
+        const rememberCheckbox = document.getElementById('remember');
+        const forgotPasswordLink = document.getElementById('forgotPassword');
+        const loginBtn = document.getElementById('loginBtn');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const btnText = document.getElementById('btnText');
+        const messageContainer = document.getElementById('message-container');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeLogin();
+        });
+
+        function initializeLogin() {
+            // Check if user is already logged in
+            checkAuthState();
+            
+            // Set up event listeners
+            setupEventListeners();
+            
+            // Load remembered username
+            loadRememberedUsername();
+        }
+
+        function setupEventListeners() {
+            // Form submission
+            loginForm.addEventListener('submit', handleLogin);
+            
+            // Password toggle
+            passwordToggle.addEventListener('click', togglePassword);
+            
+            // Forgot password
+            forgotPasswordLink.addEventListener('click', handleForgotPassword);
+            
+            // Enter key on inputs
+            usernameInput.addEventListener('keypress', handleEnterKey);
+            passwordInput.addEventListener('keypress', handleEnterKey);
+        }
+
+        function checkAuthState() {
+            const token = localStorage.getItem('admin_token');
+            
+            if (token) {
+                // Verify token is still valid
+                verifyToken(token);
+            }
+        }
+
+        async function verifyToken(token) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/auth/me`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Token is valid, redirect to dashboard
+                    window.location.href = 'dashboard.html';
+                } else {
+                    // Token is invalid, remove it
+                    localStorage.removeItem('admin_token');
+                }
+            } catch (error) {
+                console.error('Error verifying token:', error);
+                localStorage.removeItem('admin_token');
+            }
+        }
+
+        async function handleLogin(e) {
+            e.preventDefault();
+            
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value;
+            const remember = rememberCheckbox.checked;
+            
+            // Validate inputs
+            if (!username || !password) {
+                showMessage('error', 'Please fill in all fields');
+                return;
+            }
+            
+            // Show loading state
+            setLoadingState(true);
+            clearMessages();
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    // Store token
+                    localStorage.setItem('admin_token', data.access_token);
+                    localStorage.setItem('admin_user', JSON.stringify(data.admin));
+                    
+                    // Handle remember me
+                    if (remember) {
+                        localStorage.setItem('remembered_username', username);
+                    } else {
+                        localStorage.removeItem('remembered_username');
+                    }
+                    
+                    // Success
+                    showMessage('success', 'Login successful! Redirecting...');
+                    
+                    // Redirect to dashboard
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1500);
+                    
+                } else {
+                    throw new Error(data.error || 'Login failed');
+                }
+                
+            } catch (error) {
+                console.error('Login error:', error);
+                
+                let errorMessage = 'Login failed. Please try again.';
+                
+                if (error.message.includes('Invalid credentials')) {
+                    errorMessage = 'Invalid username or password. Please check your credentials and try again.';
+                } else if (error.message.includes('Too many requests')) {
+                    errorMessage = 'Too many login attempts. Please wait a few minutes before trying again.';
+                }
+                
+                showMessage('error', errorMessage);
+            } finally {
+                setLoadingState(false);
+            }
+        }
+
+        function handleForgotPassword(e) {
+            e.preventDefault();
+            
+            showMessage('error', 'Please contact the system administrator to reset your password.');
+        }
+
+        function togglePassword() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            const icon = passwordToggle;
+            icon.className = type === 'password' ? 'fas fa-eye password-toggle input-icon' : 'fas fa-eye-slash password-toggle input-icon';
+        }
+
+        function handleEnterKey(e) {
+            if (e.key === 'Enter') {
+                loginForm.dispatchEvent(new Event('submit'));
+            }
+        }
+
+        function loadRememberedUsername() {
+            const rememberedUsername = localStorage.getItem('remembered_username');
+            if (rememberedUsername) {
+                usernameInput.value = rememberedUsername;
+                rememberCheckbox.checked = true;
+                passwordInput.focus();
+            } else {
+                usernameInput.focus();
+            }
+        }
+
+        function setLoadingState(loading) {
+            loginBtn.disabled = loading;
+            loadingSpinner.style.display = loading ? 'inline-block' : 'none';
+            btnText.textContent = loading ? 'Signing In...' : 'Sign In';
+        }
+
+        function showMessage(type, message) {
+            clearMessages();
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `${type}-message`;
+            messageDiv.textContent = message;
+            
+            messageContainer.appendChild(messageDiv);
+            
+            // Auto-hide success messages
+            if (type === 'success') {
+                setTimeout(() => {
+                    clearMessages();
+                }, 5000);
+            }
+        }
+
+        function clearMessages() {
+            messageContainer.innerHTML = '';
+        }
+
+        // Utility function to make API calls with token
+        async function apiCall(endpoint, options = {}) {
+            const token = localStorage.getItem('admin_token');
+            
+            const defaultOptions = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...(token && { 'Authorization': `Bearer ${token}` })
+                }
+            };
+            
+            const mergedOptions = {
+                ...defaultOptions,
+                ...options,
+                headers: {
+                    ...defaultOptions.headers,
+                    ...options.headers
+                }
+            };
+            
+            const response = await fetch(`${API_BASE_URL}${endpoint}`, mergedOptions);
+            
+            // If token is invalid, redirect to login
+            if (response.status === 401 || response.status === 403) {
+                localStorage.removeItem('admin_token');
+                localStorage.removeItem('admin_user');
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            return response;
+        }
+
+        // Make apiCall globally available
+        window.apiCall = apiCall;
+    </script>
+</body>
+</html>
